@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+  }
+  html{
+    min-height: 100%;
+    position: relative;
+  }
+  body {
+    display: grid;
+    justify-items: center;
+    background: linear-gradient(180deg, rgba(14,14,17,1) 78%, rgba(39,43,49,1) 92%, rgba(62,70,78,1) 96%, rgba(114,121,128,1) 99%, rgba(159,161,168,0.9163866230085784) 100%);;
+    background-size: cover;
+    overflow: hidden;
+  }
+  #title {
+    color: white;
+    text-align: center;
+    position: absolute;
+    z-index: 2;
+    left: 20px;
+    top: 20px;
+    font-size: 15px;
+  }
+  
+  
+  audio {
+    height: 0;
+    width: 0;
+  }
+  
+  
+  #drum-machine{
+    position: relative;
+    z-index: 1;
+    width: 275px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 20px;
+    margin-top: 10vh;
+    
+  }
+  
+  .drum-pad {
+    width: 75px;
+    height: 100px;
+    color: white;
+    border: 1px solid white; 
+    margin: 5px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    border-radius: 5px;
+    transition: all .1s;
+    background: rgba(255,255,255,0.5);
+    
+  }
+  
+  #display {
+    @extend .drum-pad;
+      width: 250px;
+      height: 50px;
+      
+  }
+  
+  .pressed {
+    filter: brightness(3);
+    background: rgba(255,255,255,0.9);
+  }
+  
+  .stripe {
+    
+    
+    z-index: -1;
+    position: absolute;
+    width: 1px;
+    height: 1000px;
+    background-color: red;
+    animation: slide-left 5s linear infinite;
+    -webkit-animation: slide-left 5s linear infinite;
+    
+    left: 700px;
+    top: 700px;
+    overflow: hidden;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg) ;
+    -ms-transform: rotate(45deg);
+  }
+  
+  
+  ///-- looks terrible in chrome? ... :-/
+  
+  
+  @keyframes slide-left {
+    20% {background-color: red}
+    30% { background-color: orange }
+    40% { background-color: yellow  }
+    50% { background-color: green }
+    60% { background-color: blue;  }
+    70% {background-color: purple;}
+    100% { left: -700px; top: -300px}
+    100% {  transform: scale(60); }
+  }
+  
+  
+  
+  @-webkit-keyframes slide-left {
+    0% { -webkit-left: 700px; -webkit-top: 700px}
+    0% { -webkit-background-color: red; -webkit-transform: scale(1); }
+    20% { -webkit-background-color: red; }
+    30% { -webkit-background-color: orange }
+    40% { -webkit-background-color: yellow }
+    60% { -webkit-background-color: blue;  }
+    70% { -webkit-background-color: purple;}
+    100% { -webkit-left: -700px; -webkit-top: -700px}
+    100% { -webkit-background-color: purple; -webkit-transform: scale(60);}
+  }
+  
+  
