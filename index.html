@@ -1,73 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Drum Kit using JavasScript, CSS, HTML</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="stylesheet.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="stylesheet.css" />
+  </head>
+  <body>
+    <div id="scenery">
+      <div id="title">
+        Drum Kit for FreeCodeCamp
+        <i class="fa fa-free-code-camp" aria-hidden="true"></i> <br />
+        by Cary
+      </div>
 
-    <div id="scenery">        
-    
-        <div id="title">Drum Kit for FreeCodeCamp <i class="fa fa-free-code-camp" aria-hidden="true"></i> <br>                       
-                by Cary
+      <div id="drum-machine">
+        <div class="drum-pad" name="Heater 1" data-keyCode="KeyQ" id="soundQ">
+          Q
+          <audio
+            id="Q"
+            class="clip"
+            data-keyCode="KeyQ"
+            src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3"
+          ></audio>
         </div>
-        
-        <div id="drum-machine">
 
-            <div class="drum-pad" name="Heater 1" data-keyCode="KeyQ" id="soundQ" >
-                Q
-                <audio id="Q" class="clip" data-keyCode="KeyQ" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3"></audio>
-            </div>
-            
-            <div class="drum-pad" name="Heater 2" data-keyCode="KeyW" id="soundW" >
-                W
-                <audio id="W" class="clip" data-keyCode="KeyW" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3"></audio>
-                
-                </div>
-            
-            <div class="drum-pad" name="Heater 3" data-keyCode="KeyE"id="soundE" >
-                E
-                <audio id="E" class="clip" data-keyCode="KeyE" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3"></audio>
-            </div>
-            
-            <div class="drum-pad" name="Kick n' Hat" data-keyCode="KeyA" id="soundA" >
-                A
-                <audio id="A" class="clip" data-keyCode="KeyA" src="https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3"></audio>
-            </div>
-            
-            <div class="drum-pad" name="Kick n' Punch" data-keyCode="KeyS" id="soundS">
-                S
-                <audio id="S" class="clip" data-keyCode="KeyS" src="https://s3.amazonaws.com/freecodecamp/drums/punchy_kick_1.mp3"></audio> 
-            </div>
-            
-            <div class="drum-pad" name="Close High Hat"data-keyCode="KeyD" id="soundD">
-                D
-                <audio id="D" class="clip" data-keyCode="KeyD" src="https://s3.amazonaws.com/freecodecamp/drums/Bld_H1.mp3"></audio>
-            </div>
-            
-            <div  class="drum-pad" name="Snare" data-keyCode="KeyZ" id="soundZ" >
-                Z
-                <audio id="Z" class="clip"data-keyCode="KeyZ" src="https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3"></audio>
-            </div>
-            
-            <div class="drum-pad" name="Side Stick" data-keyCode="KeyX" id="soundX">
-                X
-                <audio id="X" class="clip" data-keyCode="KeyX" src="https://s3.amazonaws.com/freecodecamp/drums/side_stick_1.mp3"></audio>
-            </div>
-            
-            <div class="drum-pad" name="Sisst" data-keyCode="KeyC" id="soundC" >
-                C
-                <audio id="C" class="clip" data-keyCode="KeyC" src="https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3"></audio>      
-            </div>
-            
-            <div id="display"></div>
-
+        <div class="drum-pad" name="Heater 2" data-keyCode="KeyW" id="soundW">
+          W
+          <audio
+            id="W"
+            class="clip"
+            data-keyCode="KeyW"
+            src="https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3"
+          ></audio>
         </div>
-        
+
+        <div class="drum-pad" name="Heater 3" data-keyCode="KeyE" id="soundE">
+          E
+          <audio
+            id="E"
+            class="clip"
+            data-keyCode="KeyE"
+            src="https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3"
+          ></audio>
+        </div>
+
+        <div
+          class="drum-pad"
+          name="Kick n' Hat"
+          data-keyCode="KeyA"
+          id="soundA"
+        >
+          A
+          <audio
+            id="A"
+            class="clip"
+            data-keyCode="KeyA"
+            src="https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3"
+          ></audio>
+        </div>
+
+        <div
+          class="drum-pad"
+          name="Kick n' Punch"
+          data-keyCode="KeyS"
+          id="soundS"
+        >
+          S
+          <audio
+            id="S"
+            class="clip"
+            data-keyCode="KeyS"
+            src="https://s3.amazonaws.com/freecodecamp/drums/punchy_kick_1.mp3"
+          ></audio>
+        </div>
+
+        <div
+          class="drum-pad"
+          name="Close High Hat"
+          data-keyCode="KeyD"
+          id="soundD"
+        >
+          D
+          <audio
+            id="D"
+            class="clip"
+            data-keyCode="KeyD"
+            src="https://s3.amazonaws.com/freecodecamp/drums/Bld_H1.mp3"
+          ></audio>
+        </div>
+
+        <div class="drum-pad" name="Snare" data-keyCode="KeyZ" id="soundZ">
+          Z
+          <audio
+            id="Z"
+            class="clip"
+            data-keyCode="KeyZ"
+            src="https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3"
+          ></audio>
+        </div>
+
+        <div class="drum-pad" name="Side Stick" data-keyCode="KeyX" id="soundX">
+          X
+          <audio
+            id="X"
+            class="clip"
+            data-keyCode="KeyX"
+            src="https://s3.amazonaws.com/freecodecamp/drums/side_stick_1.mp3"
+          ></audio>
+        </div>
+
+        <div class="drum-pad" name="Sisst" data-keyCode="KeyC" id="soundC">
+          C
+          <audio
+            id="C"
+            class="clip"
+            data-keyCode="KeyC"
+            src="https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3"
+          ></audio>
+        </div>
+
+        <div id="display"></div>
+      </div>
     </div>
     <script src="scripts.js"></script>
-</body>
+  </body>
 </html>
