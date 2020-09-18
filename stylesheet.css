@@ -89,8 +89,8 @@ audio {
   animation: slide-left 5s linear infinite;
   -webkit-animation: slide-left 5s linear infinite;
 
-  left: 700px;
-  top: 700px;
+  left: 900px;
+  top: 900px;
   overflow: hidden;
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
